@@ -21,7 +21,7 @@ body{
 }
 
 h1{
-    padding: 1rem;
+    padding: 1.5rem;
     text-align: center;
     justify-self: start;
 }
@@ -35,7 +35,7 @@ input{
 
 div{
     background-color: var(--CONTAINER);
-    height: 89vh;
+    height: 87vh;
     display: flex;
     flex-flow: column;
     justify-content: flex-end;
