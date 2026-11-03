@@ -22,7 +22,7 @@ const clearDisplay = () => {
   display.value = "";
 };
 
-//clearing last character
+// clearing last character
 const clearLastChar = () => {
   display.value = display.value.slice(0, -1);
 };
