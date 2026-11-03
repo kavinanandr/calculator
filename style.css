@@ -27,8 +27,10 @@ h1{
 }
 
 input{ 
-    padding: 2rem;
+    padding: 4rem;
     width: 100vw;
+    color: black;
+    font-size: 3rem;
 }
 
 div{
