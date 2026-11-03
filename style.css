@@ -1,150 +1,146 @@
 /* page reset */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-:root{
-    --BG-PAGE: #f1f5f9;
-    --CALC-BG: #ffffff;
-    --DISPLAY-BG: #f8fafc;
-    --DISPLAY-TEXT: #0f172a;
-    --KEYS: #e2e8f0;
-    --KEYS-TEXT: #1e293b;
-    --KEY-HOVER: #cbd5e1;
+:root {
+  --BG-PAGE: #f1f5f9;
+  --CALC-BG: #ffffff;
+  --DISPLAY-BG: #f8fafc;
+  --DISPLAY-TEXT: #0f172a;
+  --KEYS: #e2e8f0;
+  --KEYS-TEXT: #1e293b;
+  --KEY-HOVER: #cbd5e1;
+  --COLOR-KEYS: #f97316;
+  --COLOR-TEXT: #ffffff;
+  --COLOR-HOVER: #ea580c;
+  --CARD-SHADOW: 0 20px 35px -10px rgba(0, 0, 0, 0.15);
+  --CARD-BORDER: 1px solid #e2e8f0;
+}
+
+body {
+  background-color: var(--BODY-BG);
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column;
+  background-color: var(--BG-PAGE);
+}
+
+h1 {
+  padding: 1.5rem;
+  color: var(--DISPLAY-TEXT);
+  text-align: center;
+  justify-self: start;
+}
+
+input {
+  padding: 4rem;
+  width: 100vw;
+  background-color: var(--DISPLAY-BG);
+  color: var(--DISPLAY-TEXT);
+  font-size: 3rem;
+}
+
+.calculator {
+  background-color: var(--CALC-BG);
+  height: 87vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+  justify-self: flex-end;
+}
+
+.calculator div {
+  background-color: var(--CALC-BG);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  justify-items: center;
+  justify-content: center;
+  align-content: end;
+}
+
+button {
+  border: none;
+  border-radius: 50%;
+  padding: 1rem;
+  height: 4rem;
+  width: 4rem;
+  font-size: 1.5rem;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: darkgray;
+}
+
+.keys {
+  background-color: var(--KEYS);
+  color: var(--KEYS-TEXT);
+}
+
+.keys:hover {
+  background-color: var(--KEY-HOVER);
+}
+
+.keys:active {
+  background-color: var(--KEY-ACTIVE);
+}
+
+.color {
+  background-color: var(--COLOR-KEYS);
+  color: var(--COLOR-TEXT);
+}
+
+.color:hover {
+  background-color: var(--COLOR-HOVER);
+}
+
+.color:active {
+  background-color: var(--COLOR-ACTIVE);
+}
+
+/* dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --BG-PAGE: #0b0f19;
+    --CALC-BG: #1e293b;
+    --DISPLAY-BG: #0f172a;
+    --DISPLAY-TEXT: #f8fafc;
+    --KEYS: #334155;
+    --KEYS-TEXT: #f8fafc;
+    --KEY-HOVER: #475569;
     --COLOR-KEYS: #f97316;
     --COLOR-TEXT: #ffffff;
     --COLOR-HOVER: #ea580c;
-    --CARD-SHADOW: 0 20px 35px -10px rgba(0, 0, 0, 0.15);
-    --CARD-BORDER: 1px solid #e2e8f0;
-}
-
-body{
-    background-color: var(--BODY-BG);
-    font-family: Arial, Helvetica, sans-serif;
-    min-height: 100vh;
-    display: flex;
-    flex-flow: column;
-    background-color: var(--BG-PAGE);
-}
-
-h1{
-    padding: 1.5rem;
-    color: var(--DISPLAY-TEXT);
-    text-align: center;
-    justify-self: start;
-}
-
-input{ 
-    padding: 4rem;
-    width: 100vw;
-    background-color: var(--DISPLAY-BG);
-    color: var(--DISPLAY-TEXT);
-    font-size: 3rem;
-}
-
-.calculator{
-    background-color: var(--CALC-BG);
-    height: 87vh;
-    display: flex;
-    flex-flow: column;
-    justify-content: flex-end;
-    justify-self: flex-end;
-}
-
-.calculator div{
-    background-color: var(--CALC-BG);
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-    padding: 1rem;
-    justify-items: center;
-    justify-content: center;
-    align-content: end;
-}
-
-button{
-    border: none;
-    border-radius: 50%;
-    padding: 1rem;
-    height: 4rem;
-    width: 4rem;
-    font-size: 1.5rem;
-}
-
-button:hover{
-    cursor: pointer;
-    background-color: darkgray;
-}
-
-.keys{
-    background-color: var(--KEYS);
-    color: var(--KEYS-TEXT);
-}
-
-.keys:hover{
-    background-color: var(--KEY-HOVER);
-}
-
-.keys:active{
-    background-color: var(--KEY-ACTIVE);
-}
-
-.color{
-    background-color: var(--COLOR-KEYS);
-    color: var(--COLOR-TEXT);
-}
-
-.color:hover{
-    background-color: var(--COLOR-HOVER);
-}
-
-.color:active{
-    background-color: var(--COLOR-ACTIVE);
-}
-
-/*dark mode */
-@media (prefers-color-scheme: dark){
-
-    :root{
-        --BG-PAGE: #0b0f19;
-        --CALC-BG: #1e293b;
-        --DISPLAY-BG: #0f172a;
-        --DISPLAY-TEXT: #f8fafc;
-        --KEYS: #334155;
-        --KEYS-TEXT: #f8fafc;
-        --KEY-HOVER: #475569;
-        --COLOR-KEYS: #f97316;
-        --COLOR-TEXT: #ffffff;
-        --COLOR-HOVER: #ea580c;
-        --CARD-SHADOW: 0 25px 40px -15px rgba(0, 0, 0, 0.6);
-        --CARD-BORDER: 1px solid #334155;
-    }
-
+    --CARD-SHADOW: 0 25px 40px -15px rgba(0, 0, 0, 0.6);
+    --CARD-BORDER: 1px solid #334155;
+  }
 }
 
 /* laptop design */
 @media screen and (min-width: 1024px) {
+  h1 {
+    font-size: 3rem;
+    justify-self: flex-start;
+  }
 
-    h1{
-        font-size: 3rem;
-        justify-self: flex-start;
-    }
+  input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-bottom: var(--CARD-BORDER);
+  }
 
-    input{
-        width: 100%;
-        height: 100%;
-        border: none;
-        border-bottom: var(--CARD-BORDER);
-    }
-    
-    .calculator{
-        width: 40vw;
-        height: 75vh;
-        justify-self: center;
-        border: var(--CARD-BORDER);
-        box-shadow: var(--CARD-SHADOW);
-    }
-
-} 
+  .calculator {
+    width: 40vw;
+    height: 75vh;
+    justify-self: center;
+    border: var(--CARD-BORDER);
+    box-shadow: var(--CARD-SHADOW);
+  }
+}
