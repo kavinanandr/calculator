@@ -29,6 +29,7 @@ input{
     padding: 1rem;
     width: 100vw;
 }
+
 div{
     background-color: var(--CONTAINER);
     display: flex;
@@ -70,3 +71,24 @@ button:hover{
     background-color: var(--COLOR-HOVER);
 }
 
+/*dark mode */
+@media (prefers-color-scheme: dark){
+
+    :root{
+        --CONTAINER: rgba(169, 169, 169, 0.191);
+        --KEYS: lightgray;
+    }
+
+    body{
+        background-color: rgba(0, 0, 0, 0.882);
+    }
+
+    h1{
+        color: whitesmoke;
+    }
+
+    input{
+        background-color: lightgray;
+    }
+
+}
