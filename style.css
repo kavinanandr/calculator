@@ -12,28 +12,32 @@
     --COLOR-KEYS: orange;
     --COLOR-HOVER: hsla(39, 100%, 50%, 0.5);
 }
+
 body{
     font-family: Arial, Helvetica, sans-serif;
     min-height: 100vh;
     display: flex;
     flex-flow: column;
-    justify-content: space-between;
 }
 
 h1{
     padding: 1rem;
     text-align: center;
+    justify-self: start;
 }
 
 input{ 
-    padding: 1rem;
+    padding: 2rem;
     width: 100vw;
 }
 
 div{
     background-color: var(--CONTAINER);
+    height: 89vh;
     display: flex;
     flex-flow: column;
+    justify-content: flex-end;
+    justify-self: flex-end;
 }
 
 div div{
@@ -43,6 +47,7 @@ div div{
     padding: 1rem;
     justify-items: center;
     justify-content: center;
+    align-content: end;
 }
 
 button{
@@ -51,7 +56,7 @@ button{
     padding: 1rem;
     height: 4rem;
     width: 4rem;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
 }
 
 button:hover{
@@ -89,6 +94,27 @@ button:hover{
 
     input{
         background-color: lightgray;
+    }
+
+}
+
+/* laptop design */
+@media screen and (min-width: 1024px) {
+
+    h1{
+        font-size: 3rem;
+        justify-self: flex-start;
+    }
+
+    input{
+        width: 40vw;
+        padding: 5rem;
+    }
+    
+    div{
+        width: 40vw;
+        height: 75vh;
+        justify-self: center;
     }
 
 }
