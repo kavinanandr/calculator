@@ -1,14 +1,14 @@
 "use strict";
 
-/* variable declaration */
+// variable declaration
 const display = document.querySelector("input");
 
-/* appending elements to display */
+// appending elements to display
 const appendToDisplay = (input) => {
   display.value += input;
 };
 
-/* performing calculations */
+// performing calculations
 const calculate = () => {
   try {
     display.value = eval(display.value);
@@ -17,7 +17,12 @@ const calculate = () => {
   }
 };
 
-/* clearing display */
+// clearing display
 const clearDisplay = () => {
   display.value = "";
+};
+
+//clearing last character
+const clearLastChar = () => {
+  display.value = display.value.slice(0, -1);
 };
