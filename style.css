@@ -146,7 +146,6 @@ button:hover {
     text-align: center;
   }
   .calculator {
-    width: 100%;
     justify-self: flex-end;
     align-self: flex-end;
   }
