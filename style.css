@@ -22,12 +22,10 @@
 
 body {
   background-color: var(--BG-PAGE);
+  height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
-  min-height: 100vh;
   display: flex;
   flex-flow: column;
-  background-color: var(--BG-PAGE);
-  height: 100vh;
 }
 
 header {
@@ -63,6 +61,7 @@ main {
 }
 .calculator {
   background-color: var(--CALC-BG);
+  width: 100%;
   height: 100%;
   display: flex;
   flex-flow: column;
@@ -72,6 +71,7 @@ main {
 
 .calculator div {
   background-color: var(--CALC-BG);
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
@@ -79,7 +79,6 @@ main {
   justify-items: center;
   justify-content: center;
   align-content: end;
-  flex-grow: 1;
 }
 
 button {
@@ -140,13 +139,27 @@ button:hover {
   }
 }
 
-/* laptop design */
-@media screen and (min-width: 1024px) {
+/* tablet design */
+@media screen and (min-width: 768px) {
   h1 {
     font-size: 2.5rem;
     text-align: center;
   }
+  .calculator {
+    width: 100%;
+    justify-self: flex-end;
+    align-self: flex-end;
+  }
 
+  button {
+    width: 5rem;
+    height: 5rem;
+    font-size: 2rem;
+  }
+}
+
+/* laptop design */
+@media screen and (min-width: 1024px) {
   input {
     width: 100%;
     height: 25%;
@@ -157,18 +170,11 @@ button:hover {
   .calculator {
     width: 40vw;
     justify-self: center;
-    align-self: flex-end;
     border: var(--CARD-BORDER);
     box-shadow: var(--CARD-SHADOW);
   }
 
   .calculator div {
     align-content: center;
-  }
-
-  button {
-    width: 5rem;
-    height: 5rem;
-    font-size: 2rem;
   }
 }
