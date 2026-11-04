@@ -48,7 +48,7 @@ h1 {
 }
 
 input {
-  padding: 5rem;
+  padding: 4rem;
   width: 100%;
   background-color: var(--DISPLAY-BG);
   color: var(--DISPLAY-TEXT);
@@ -145,9 +145,14 @@ button:hover {
     font-size: 2.5rem;
     text-align: center;
   }
+
   .calculator {
     justify-self: flex-end;
     align-self: flex-end;
+  }
+
+  input{
+    padding: 3rem;
   }
 
   button {
