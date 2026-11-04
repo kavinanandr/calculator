@@ -29,8 +29,8 @@ body {
 }
 
 header {
-  display: flex;
   background-color: var(--CALC-BG);
+  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -48,7 +48,7 @@ h1 {
 }
 
 input {
-  padding: 3rem;
+  padding: 5rem;
   width: 100%;
   background-color: var(--DISPLAY-BG);
   color: var(--DISPLAY-TEXT);
@@ -65,7 +65,7 @@ main {
   height: 100%;
   display: flex;
   flex-flow: column;
-  justify-content: flex-end;
+  justify-content: center;
   justify-self: flex-end;
 }
 
