@@ -62,7 +62,7 @@ main {
 .calculator {
   background-color: var(--CALC-BG);
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   display: flex;
   flex-flow: column;
   justify-content: center;
