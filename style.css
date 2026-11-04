@@ -21,32 +21,49 @@
 }
 
 body {
-  background-color: var(--BODY-BG);
+  background-color: var(--BG-PAGE);
   font-family: Arial, Helvetica, sans-serif;
   min-height: 100vh;
   display: flex;
   flex-flow: column;
   background-color: var(--BG-PAGE);
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  background-color: var(--CALC-BG);
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  padding: 1rem;
+  width: auto;
+  height: 10vh;
+  flex-grow: 1;
 }
 
 h1 {
-  padding: 1.5rem;
   color: var(--DISPLAY-TEXT);
-  text-align: center;
-  justify-self: start;
+  flex-grow: 2;
 }
 
 input {
-  padding: 4rem;
-  width: 100vw;
+  padding: 3rem;
+  width: 100%;
   background-color: var(--DISPLAY-BG);
   color: var(--DISPLAY-TEXT);
   font-size: 3rem;
 }
 
+main {
+  height: 100%;
+  width: 100%;
+}
 .calculator {
   background-color: var(--CALC-BG);
-  height: 87vh;
+  height: 100%;
   display: flex;
   flex-flow: column;
   justify-content: flex-end;
@@ -62,6 +79,7 @@ input {
   justify-items: center;
   justify-content: center;
   align-content: end;
+  flex-grow: 1;
 }
 
 button {
@@ -125,22 +143,32 @@ button:hover {
 /* laptop design */
 @media screen and (min-width: 1024px) {
   h1 {
-    font-size: 3rem;
-    justify-self: flex-start;
+    font-size: 2.5rem;
+    text-align: center;
   }
 
   input {
     width: 100%;
-    height: 100%;
+    height: 25%;
     border: none;
     border-bottom: var(--CARD-BORDER);
   }
 
   .calculator {
     width: 40vw;
-    height: 75vh;
     justify-self: center;
+    align-self: flex-end;
     border: var(--CARD-BORDER);
     box-shadow: var(--CARD-SHADOW);
+  }
+
+  .calculator div {
+    align-content: center;
+  }
+
+  button {
+    width: 5rem;
+    height: 5rem;
+    font-size: 2rem;
   }
 }
