@@ -48,7 +48,7 @@ h1 {
 }
 
 input {
-  padding: 4rem;
+  padding: 3rem 1rem;
   width: 100%;
   background-color: var(--DISPLAY-BG);
   color: var(--DISPLAY-TEXT);
@@ -72,10 +72,10 @@ main {
 .calculator div {
   background-color: var(--CALC-BG);
   width: 100%;
+  padding: 1.5rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
-  padding: 1rem;
   justify-items: center;
   justify-content: center;
   align-content: end;
@@ -142,7 +142,6 @@ button:hover {
 /* tablet design */
 @media screen and (min-width: 768px) {
   h1 {
-    /* font-size: 1.5rem; */
     text-align: center;
   }
 
@@ -152,7 +151,7 @@ button:hover {
   }
 
   input {
-    padding: 2rem;
+    padding: 2rem 1rem;
   }
 
   button {
