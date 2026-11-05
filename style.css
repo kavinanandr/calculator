@@ -142,7 +142,7 @@ button:hover {
 /* tablet design */
 @media screen and (min-width: 768px) {
   h1 {
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
     text-align: center;
   }
 
@@ -166,7 +166,6 @@ button:hover {
 @media screen and (min-width: 1024px) {
   input {
     width: 100%;
-    height: 50%;
     border: none;
     border-bottom: var(--CARD-BORDER);
   }
@@ -180,6 +179,5 @@ button:hover {
 
   .calculator div {
     align-content: center;
-    height: 100%;
   }
 }
